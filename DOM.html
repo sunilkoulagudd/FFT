@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <h1 id="head">DOM</h1>
+
+    <button onclick="Btn()">Change</button>
+
+    <form onsubmit="login(event)">
+        <h1>Login Form</h1>
+
+        <label>Username:</label>
+        <input type="text" name="user name" id="v1">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="upwd" id="v2">
+        <br><br>
+
+        <button type="submit">Login</button>
+
+        <p id="result"></p>
+    </form>
+
+    <script>
+
+        function Btn() {
+            document.getElementById("head").innerHTML = "Hello Charan";
+        }
+
+        function login(event) {
+
+            event.preventDefault();
+
+            let uname = document.getElementById("v1").value;
+            let upwd = document.getElementById("v2").value;
+
+            if (uname == "Charan" && upwd == "123") {
+
+                document.getElementById("result").innerHTML =
+                    "Login Successfully";
+
+            } else {
+
+                document.getElementById("result").innerHTML =
+                    "Login Failed";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
